@@ -1,0 +1,27 @@
+PROCEDURE insertion_sort(var tab: ARRAY_OF integer[50])
+VAR
+    i,x,j,n:INTEGER;
+BEGIN
+    n:= tab.length;
+    FOR i FROM 1 TO n-1  STEP 1  DO
+        j:=i;
+        WHILE (j>= 0 and tab[j-1]>tab[j]) DO
+            swap(tab[j],tab[j-1])
+            j:= j-1;
+            
+        END_WHILE
+    END_FOR
+END
+
+PROCEDURE swap(var x,y:INTEGER)
+VAR
+    z:INTEGER
+BEGIN
+    z:=x;
+    x:=y;
+    y:=z;
+END
+
+
+
+
